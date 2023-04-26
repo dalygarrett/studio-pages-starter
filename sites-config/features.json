@@ -14,7 +14,7 @@
       "$id": "skis",
       "filter": {
         "entityTypes": [
-          "ce_product"
+          "healthcareProfessional"
         ]
       },
       "localization": {
@@ -25,10 +25,17 @@
       },
       "fields": [
         "name",
-        "c_price",
+        "admittingHospitals",
         "description",
         "photoGallery",
-        "slug"
+        "slug",
+        "insuranceAccepted",
+        "acceptingNewPatients",
+        "emails",
+        "headshot",
+        "degrees",
+        "educationList",
+        "certifications"
       ]
     }
   ]
