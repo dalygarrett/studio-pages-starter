@@ -21,7 +21,7 @@ import "../index.css";
 
 export const config: TemplateConfig = {
   stream: {
-    $id: "skis",
+    $id: "hc",
     filter: { entityTypes: ["healthcareProfessional"] },
     localization: { locales: ["en"], primary: false },
     fields: [
