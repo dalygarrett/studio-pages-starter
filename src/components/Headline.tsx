@@ -23,7 +23,7 @@ const Headline = ({ value, textSize, fontWeight }: HeadlineProps) => {
   return (
     <div className="mt-4">
       <h1
-        className={`text-${textSize} font-${fontWeight} tracking-tight text-gray-900`}
+        className={`text-${textSize} font-${fontWeight} tracking-tight p-2 text-gray-900`}
       >
         {value}
       </h1>

@@ -9,7 +9,7 @@ import Label from "../components/Label";
 
 import BigButton from "../components/BigButton";
 import CenteredContainer from "../components/CenteredContainer";
-import FAQCentered from "../components/FAQCentered";
+import Divider from "../components/Divider";
 import Footer from "../components/Footer";
 import PageLayout from "../components/PageLayout";
 import Paragraph from "../components/Paragraph";
@@ -24,7 +24,30 @@ export const config: TemplateConfig = {
     $id: "skis",
     filter: { entityTypes: ["healthcareProfessional"] },
     localization: { locales: ["en"], primary: false },
-    fields: ["name", "admittingHospitals", "description", "photoGallery", "slug", "insuranceAccepted", "acceptingNewPatients", "emails", "headshot", "degrees", "educationList", "certifications"],
+    fields: [
+      "photoGallery",
+      "photoGallery",
+      "logo.image.url",
+      "name",
+      "c_facility",
+      "description",
+      "headshot.url",
+      "c_benefits",
+      "c_education",
+      "c_specialties",
+      "c_awards",
+      "c_insurances",
+      "c_languages",
+      "photoGallery",
+      "photoGallery",
+      "c_question2",
+      "c_answer2",
+      "c_question3",
+      "c_answer3",
+      "c_question1",
+      "c_answer1",
+      "slug",
+    ],
   },
 };
 export const getPath: GetPath<TemplateProps> = ({ document }) => {
@@ -36,8 +59,8 @@ export default function Product({ document }: TemplateProps) {
     <>
       <PageLayout backgroundColor="#FFFFFF">
         <HeaderSimple
-          backgroundColor="#BAD8FD"
-          logo=" https://a.mktgcdn.com/p/R9FjcYjRNA5dAespqgHFLMvu2m18-E5Apnb3KON0oJY/300x300.png"
+          backgroundColor="#ffffff"
+          logo={`${document.logo.image.url}`}
         />
         <CenteredContainer>
           <GridContainer>
@@ -47,8 +70,9 @@ export default function Product({ document }: TemplateProps) {
                 fontWeight="bold"
                 textSize="4xl"
               />
+              <Divider />
               <HStack>
-                <Label value={`$${document.admittingHospitals}`} />
+                <Label value={`${document.c_facility}`} />
                 <Reviews averageRating={5} reviewCount={1995} />
               </HStack>
               <Paragraph
@@ -56,29 +80,90 @@ export default function Product({ document }: TemplateProps) {
                 fontWeight="light"
                 textSize="base"
               />
+              <VStack>
+                <BigButton title={`Request Booking`} href="#" />
+              </VStack>
             </VStack>
-            <ProductImage
-              src={`${document.photoGallery[0].image.url}`}
-              alt="a pair of skis"
-            />
             <VStack>
-              <BigButton title={`Buy Now`} href="#" />
-              <BigButton title="Button Title" href="#" />
+              <ProductImage
+                src={`${document.headshot.url}`}
+                alt="a pair of skis"
+              />
+              <Paragraph
+                value={`${document.c_benefits}`}
+                textSize="lg"
+                fontWeight="light"
+              />
             </VStack>
           </GridContainer>
           <ProductTable
-            title="Product Details"
-            rockerType="All Mountain Rocker – Smooth rocker at both tip and tail with camber underfoot provides balanced performance anywhere on the mountain."
-            shape="True Tip LT – By trimming the amount of heavy ABS plastic in the tip and extending the lightweight wood core into this area with a taper that further reduces weight, Nordica enhances playfulness and maneuverability of the ski without compromising that unmatchable feeling of powerful and control."
-            core="Lite Performance Wood | Poplar / Beech"
-            laminates="Carbon Chassis LT – A proprietary blend of carbon materials to reduce weight while maximizing performance."
-            sidewalls="ABS Sidewalls"
-            bindingCompatibility="We recommend a brake width equal to or at most 15 mm wider than the ski waist width."
+            title={`Additional Information`}
+            rockerType={`${document.c_education}`}
+            shape={`${document.c_specialties}`}
+            core={`${document.c_awards}`}
+            laminates={`${document.c_insurances}`}
+            sidewalls={`${document.c_languages}`}
+            bindingCompatibility={``}
           />
-          <FAQCentered backgroundColor={``} heading={``} />
+          <Divider width={``} color={``} />
+          <GridContainer>
+            <HStack>
+              <ProductImage
+                src={`${document.photoGallery[0].image.url}`}
+                alt="Light green backpack with black canvas straps and front zipper pouch."
+              />
+            </HStack>
+            <ProductImage
+              src={`${document.photoGallery[1].image.url}`}
+              alt="Light green backpack with black canvas straps and front zipper pouch."
+            />
+          </GridContainer>
+          <Divider width={``} color={``} />
+          <VStack>
+            <Headline
+              value={`Frequently Asked Questions`}
+              textSize="xl"
+              fontWeight="medium"
+            />
+            <Label value={`${document.c_question2}`} />
+            <Paragraph
+              value={`${document.c_answer2}`}
+              textSize="base"
+              fontWeight="normal"
+            />
+            <Label value={`${document.c_question3}`} />
+            <Paragraph
+              value={`${document.c_answer3}`}
+              textSize="base"
+              fontWeight="normal"
+            />
+            <Label value={`${document.c_question1}`} />
+            <Paragraph
+              value={`${document.c_answer1}`}
+              textSize="base"
+              fontWeight="normal"
+            />
+          </VStack>
+          <Divider width={``} color={``} />
+          <GridContainer>
+            <ProductImage
+              src={`${document.photoGallery[3].image.url}`}
+              alt="Light green backpack with black canvas straps and front zipper pouch."
+            />
+            <HStack>
+              <ProductImage
+                src={`${document.photoGallery[2].image.url}`}
+                alt="Light green backpack with black canvas straps and front zipper pouch."
+              />
+            </HStack>
+          </GridContainer>
         </CenteredContainer>
       </PageLayout>
-      <Footer />
+      <Footer
+        paragraph={``}
+        logo={`${document.logo.image.url}`}
+        company={`Grateful Healthcare`}
+      />
     </>
   );
 }

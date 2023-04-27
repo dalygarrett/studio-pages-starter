@@ -48,13 +48,11 @@ const ProductTable = ({
       <h2 className="text-lg font-medium text-gray-900">{title}</h2>
       <div className="mt-4">
         <div className="gap-x-4 gap-y-8">
-          {rockerType && renderRow("Rocker Type", rockerType)}
-          {shape && renderRow("Shape", shape)}
-          {core && renderRow("Core", core)}
-          {laminates && renderRow("Laminates", laminates)}
-          {sidewalls && renderRow("Sidewalls", sidewalls)}
-          {bindingCompatibility &&
-            renderRow("Binding Compatibility", bindingCompatibility)}
+          {rockerType && renderRow("Education", rockerType)}
+          {shape && renderRow("Specialties", shape)}
+          {core && renderRow("Awards", core)}
+          {laminates && renderRow("Insurances", laminates)}
+          {sidewalls && renderRow("Languages", sidewalls)}
         </div>
       </div>
     </div>

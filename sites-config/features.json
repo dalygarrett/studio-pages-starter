@@ -25,17 +25,22 @@
       },
       "fields": [
         "name",
-        "admittingHospitals",
+        "c_facility",
         "description",
-        "photoGallery",
-        "slug",
-        "insuranceAccepted",
-        "acceptingNewPatients",
-        "emails",
-        "headshot",
-        "degrees",
-        "educationList",
-        "certifications"
+        "headshot.url",
+        "c_benefits",
+        "c_education",
+        "c_specialties",
+        "c_awards",
+        "c_insurances",
+        "c_languages",
+        "c_question2",
+        "c_answer2",
+        "c_question3",
+        "c_answer3",
+        "c_question1",
+        "c_answer1",
+        "slug"
       ]
     }
   ]
