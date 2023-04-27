@@ -26,7 +26,6 @@ export const config: TemplateConfig = {
     localization: { locales: ["en"], primary: false },
     fields: [
       "photoGallery",
-      "photoGallery",
       "logo.image.url",
       "name",
       "c_facility",
@@ -38,8 +37,6 @@ export const config: TemplateConfig = {
       "c_awards",
       "c_insurances",
       "c_languages",
-      "photoGallery",
-      "photoGallery",
       "c_question2",
       "c_answer2",
       "c_question3",
