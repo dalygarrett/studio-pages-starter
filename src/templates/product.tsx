@@ -36,12 +36,15 @@ export const config: TemplateConfig = {
       "c_awards",
       "c_insurances",
       "c_languages",
+      "photoGallery",
+      "photoGallery",
       "c_question2",
       "c_answer2",
       "c_question3",
       "c_answer3",
       "c_question1",
       "c_answer1",
+      "photoGallery",
       "photoGallery",
       "slug",
     ],
@@ -79,6 +82,7 @@ export default function Product({ document }: TemplateProps) {
               />
               <VStack>
                 <BigButton title={`Request Booking`} href="#" />
+                <BigButton title={`Call Now`} href="#" />
               </VStack>
             </VStack>
             <VStack>
