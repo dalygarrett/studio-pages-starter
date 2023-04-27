@@ -3,7 +3,7 @@ export interface VStackProps {
 }
 
 const VStack = ({ children }: VStackProps) => {
-  return <div className="lg:max-w-lg lg:self-end">{children}</div>;
+  return <div className="lg:self-end">{children}</div>;
 };
 
 export default VStack;
