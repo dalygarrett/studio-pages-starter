@@ -25,7 +25,6 @@ export const config: TemplateConfig = {
     filter: { entityTypes: ["healthcareProfessional"] },
     localization: { locales: ["en"], primary: false },
     fields: [
-      "photoGallery",
       "logo.image.url",
       "name",
       "c_facility",
@@ -37,12 +36,16 @@ export const config: TemplateConfig = {
       "c_awards",
       "c_insurances",
       "c_languages",
+      "photoGallery",
+      "photoGallery",
       "c_question2",
       "c_answer2",
       "c_question3",
       "c_answer3",
       "c_question1",
       "c_answer1",
+      "photoGallery",
+      "photoGallery",
       "slug",
     ],
   },
@@ -88,7 +91,7 @@ export default function Product({ document }: TemplateProps) {
               />
               <Paragraph
                 value={`${document.c_benefits}`}
-                textSize="lg"
+                textSize="base"
                 fontWeight="light"
               />
             </VStack>
