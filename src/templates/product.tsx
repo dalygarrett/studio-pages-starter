@@ -39,7 +39,6 @@ export const config: TemplateConfig = {
       "c_insurances",
       "c_languages",
       "photoGallery",
-      "photoGallery",
       "c_question2",
       "c_answer2",
       "c_question3",
