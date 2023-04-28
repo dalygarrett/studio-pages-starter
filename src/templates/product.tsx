@@ -39,6 +39,7 @@ export const config: TemplateConfig = {
       "c_insurances",
       "c_languages",
       "photoGallery",
+      "photoGallery",
       "c_question2",
       "c_answer2",
       "c_question3",
@@ -151,18 +152,6 @@ export default function Product({ document }: TemplateProps) {
             />
           </VStack>
           <Divider width={``} color={``} />
-          <GridContainer>
-            <ProductImage
-              src={`${document.photoGallery[3].image.url}`}
-              alt="Light green backpack with black canvas straps and front zipper pouch."
-            />
-            <HStack>
-              <ProductImage
-                src={`${document.photoGallery[2].image.url}`}
-                alt="Light green backpack with black canvas straps and front zipper pouch."
-              />
-            </HStack>
-          </GridContainer>
         </CenteredContainer>
       </PageLayout>
       <Footer
