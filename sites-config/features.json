@@ -1,0 +1,51 @@
+{
+  "features": [
+    {
+      "name": "product",
+      "streamId": "hc",
+      "templateType": "JS",
+      "entityPageSet": {
+        "plugin": {}
+      }
+    }
+  ],
+  "streams": [
+    {
+      "$id": "hc",
+      "filter": {
+        "entityTypes": [
+          "healthcareProfessional"
+        ]
+      },
+      "localization": {
+        "locales": [
+          "en"
+        ],
+        "primary": false
+      },
+      "fields": [
+        "reservationUrl.url",
+        "logo.image.url",
+        "name",
+        "c_facility",
+        "description",
+        "websiteUrl.url",
+        "headshot.url",
+        "c_benefits",
+        "c_education",
+        "c_specialties",
+        "c_awards",
+        "c_insurances",
+        "c_languages",
+        "photoGallery",
+        "c_question2",
+        "c_answer2",
+        "c_question3",
+        "c_answer3",
+        "c_question1",
+        "c_answer1",
+        "slug"
+      ]
+    }
+  ]
+}
