@@ -29,6 +29,8 @@ export const config: TemplateConfig = {
       "name",
       "c_facility",
       "description",
+      "reservationUrl.url",
+      "websiteUrl.url",
       "headshot.url",
       "c_benefits",
       "c_education",
@@ -78,8 +80,14 @@ export default function Product({ document }: TemplateProps) {
                 textSize="base"
               />
               <VStack>
-                <BigButton title={`Request Booking`} href="#" />
-                <BigButton title={`Call Now`} href="#" />
+                <BigButton
+                  title={`Book Now`}
+                  href={`# ${document.reservationUrl.url}`}
+                />
+                <BigButton
+                  title={`Learn More`}
+                  href={`${document.websiteUrl.url}`}
+                />
               </VStack>
             </VStack>
             <VStack>
