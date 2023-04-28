@@ -97,7 +97,7 @@ export default function Product({ document }: TemplateProps) {
               />
               <Paragraph
                 value={`${document.c_benefits}`}
-                textSize="lg"
+                textSize="base"
                 fontWeight="light"
               />
             </VStack>
