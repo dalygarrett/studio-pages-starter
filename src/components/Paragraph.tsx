@@ -22,7 +22,7 @@ export const initialProps: ParagraphProps = {
 const Paragraph = ({ value, textSize, fontWeight }: ParagraphProps) => {
   return (
     <section aria-labelledby="information-heading" className="mt-4">
-      <div className="mt-4 space-y-6">
+      <div className="mb-4 space-y-6">
         <p className={`text-${textSize} font-${fontWeight} text-gray-500`}>
           {value}
         </p>
