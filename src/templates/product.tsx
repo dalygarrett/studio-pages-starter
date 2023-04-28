@@ -82,7 +82,7 @@ export default function Product({ document }: TemplateProps) {
               <VStack>
                 <BigButton
                   title={`Book Now`}
-                  href={`# ${document.reservationUrl.url}`}
+                  href={`${document.reservationUrl.url}`}
                 />
                 <BigButton
                   title={`Learn More`}
