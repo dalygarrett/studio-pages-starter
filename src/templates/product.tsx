@@ -25,13 +25,14 @@ export const config: TemplateConfig = {
     filter: { entityTypes: ["healthcareProfessional"] },
     localization: { locales: ["en"], primary: false },
     fields: [
+      "reservationUrl",
+      "headshot",
       "logo",
       "name",
       "c_facility",
       "description",
       "websiteUrl",
       "c_benefits",
-      "headshot",
       "c_education",
       "c_specialties",
       "c_awards",
@@ -75,10 +76,14 @@ export default function Product({ document }: TemplateProps) {
               </HStack>
               <Paragraph
                 value={`${document.description}`}
-                fontWeight="normal"
-                textSize="xl"
+                fontWeight="bold"
+                textSize="base"
               />
               <VStack>
+                <BigButton
+                  title={`Reservation`}
+                  href={`${document.reservationUrl.url}`}
+                />
                 <BigButton
                   title={`Learn More`}
                   href={`${document.websiteUrl.url}`}
@@ -86,14 +91,14 @@ export default function Product({ document }: TemplateProps) {
               </VStack>
             </VStack>
             <VStack>
-              <Paragraph
-                value={`${document.c_benefits}`}
-                textSize="base"
-                fontWeight="light"
-              />
               <ProductImage
                 src={`${document.headshot.url}`}
                 alt="a pair of skis"
+              />
+              <Paragraph
+                value={`${document.c_benefits}`}
+                textSize="xl"
+                fontWeight="extrabold"
               />
             </VStack>
           </GridContainer>
