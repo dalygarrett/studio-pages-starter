@@ -25,13 +25,13 @@ export const config: TemplateConfig = {
     filter: { entityTypes: ["healthcareProfessional"] },
     localization: { locales: ["en"], primary: false },
     fields: [
-      "reservationUrl",
-      "headshot",
       "logo",
       "name",
       "c_facility",
       "description",
       "websiteUrl",
+      "reservationUrl",
+      "headshot",
       "c_benefits",
       "c_education",
       "c_specialties",
@@ -81,12 +81,12 @@ export default function Product({ document }: TemplateProps) {
               />
               <VStack>
                 <BigButton
-                  title={`Book Now`}
-                  href={`${document.reservationUrl.url}`}
-                />
-                <BigButton
                   title={`Learn More`}
                   href={`${document.websiteUrl.url}`}
+                />
+                <BigButton
+                  title={`Book Now`}
+                  href={`${document.reservationUrl.url}`}
                 />
               </VStack>
             </VStack>
